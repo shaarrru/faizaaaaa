@@ -7,10 +7,11 @@
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C7D1LJ5DG"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'hh');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0C7D1LJ5DG');
     </script>
     
     <style>
@@ -165,16 +166,15 @@
             "May this Eid bring you peace, and prosperity",
             "May Allah accept your good deeds and prayers",
             "Eid blessings to you and your loved ones",
-            "And may He make us and you among the accepted ones",
-            "I know I’m not welcome here",
-            "Nakathtu waʿdī.. wa lam astatiʿ an ahmī al-qalba alladhī wathiqa bī",
-            "But I couldn’t stop myself",
+            "And may He make us and you among<br>the accepted ones",
+            "I know I'm not welcome here",
+            "Nakathtu waʿdī.. wa lam astatiʿ <br>an ahmī al-qalba alladhī wathiqa bī",
+            "But I couldn't stop myself",
             "Eid Mubarak, hubun!",
             "Ashtaaqik akthar min kulli shay'",
             "Uhibbuki akthar min kulli shayʼ",
             "I just wanted to see you happy",
-            "No worries, I will stay dead promise"
-            
+            "No worries<br>I will stay dead promise"
         ];
         
         document.addEventListener('DOMContentLoaded', function() {
@@ -272,7 +272,7 @@
                 
                 const newPrompt = document.createElement('div');
                 newPrompt.className = 'game-overlay-text';
-                newPrompt.textContent = prompts[currentPrompt];
+                newPrompt.innerHTML = prompts[currentPrompt];  // Changed from textContent to innerHTML
                 newPrompt.style.fontSize = '0.8em';
                 newPrompt.style.marginBottom = '10px';
                 
